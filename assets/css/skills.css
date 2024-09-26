@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('../fonts/CooperHewitt-Light.woff') format('woff'),
+    url('../fonts/CooperHewitt-Thin.woff') format('woff');
+}
+
+:root {
+    --white: #FFFFFF;
+    --light-grey: #D9D9D9;
+    --beaver: #e6e6e6;
+    --black: #141414;
+    --eerie-black: #050816;
+    --jet:  #242737b0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 80%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--beaver) var(--eerie-black);
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: var(--eerie-black);
+}
+
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--beaver);;
+}
+
+
+/* Habilidades */
+
+.habilidades {
+    background-color: var(--jet);
+    width: 100%;
+    height: auto;
+}  
+
+.cards_container--habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+    justify-content: center;
+    padding-bottom: 5rem;
+    width: 80%;
+}
+
+.cards--habilidades {
+    background-color: var(--eerie-black);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 13rem;
+    height: 14rem;
+}
+
+.cards--habilidades img {
+    margin-top: .7rem;
+    width: 9rem;
+}
+
+.cards--habilidades p {
+    color: var(--white);
+    font-family: 'Cooper Hewitt';
+    letter-spacing: .1rem;
+    font-size: 1.4rem;
+    margin-bottom: .7rem;
+}
+
+/* Formación */
+
+.formacion {
+    background-color: var(--jet);
+    width: 100%;
+    height: auto;
+}
+
+.cards_container--formacion {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding:1rem;
+}
+
+.cards--formacion {
+    background-color: var(--eerie-black);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30rem;
+    height: auto;
+    margin: 0 1rem 1rem 1rem;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+.cards--formacion img {
+    width: 25rem;
+}
+
+.container_texto--formacion {
+    margin-bottom: 1.3rem;
+}
+
+img.logo-unal {
+    width: 24rem;
+}
+
+img.logo-one {
+    width: 21rem;
+    margin: 7rem 0 6rem 0;
+}
+
+img.logo-sena {
+    width: 18rem;
+    margin: 2.4rem 0;
+}
+
+.cards--formacion p:nth-child(1) {
+    color: var(--beaver);
+    font-family: 'Cooper Hewitt';
+    letter-spacing: .1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: .7rem;
+}
+
+.cards--formacion p:nth-child(2) {
+    color: var(--light-grey);
+    font-family: 'Cooper Hewitt';
+    letter-spacing: .1rem;
+    font-size: 1.4rem;
+}
+@media screen and (max-width: 500px) {
+    .cards--formacion{
+      width: auto;
+      font: auto 
+    }
+   
+  }

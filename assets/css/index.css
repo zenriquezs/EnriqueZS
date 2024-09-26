@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #050816;
+}
+
+nav{
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    background-color: transparent;
+    
+}
+
+.nav-link{
+    color: rgb(153, 153, 153);
+    
+}
+.nav-item :hover{
+ color: white;
+ border-bottom:2px solid white 
+}
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hamburg,
+.cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    display: none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+
+.nav-container .links{
+    display: flex;
+}
+
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+
+.nav-container .links a:hover{
+    color: #ffffff;
+}
+
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow:  0 0 20px black;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover{
+    background-color: #f7f7f7;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+}
+
+.main-container{
+    background-image: url('/assets/images/herobg.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #050816;
+}
+
+.main-container .image{
+    width: 30%;
+    height: 70%;
+    border-radius: 10%;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(65, 41, 117, 0.905);
+}
+
+.main-container .image img{
+    width: 100%;
+}
+
+.main-container .image:hover{
+    animation: animate 1.5s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%{
+        scale: 1;
+    }
+    
+    50%{
+        scale: 1.05;
+    }
+    
+    100%{
+        scale: 1;
+    }
+}
+
+.main-container .content{
+    color: white;
+    width: 40%;
+    min-height: 100px;
+}
+.content {
+text-align: justify;
+}
+
+.content h1{
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+}
+
+.content div label{    
+    color: rgb(145 94 255 );
+    text-shadow: 0  0 1px rgba(145, 94, 255, 0.905);
+    text-align: justify;
+}
+
+.content .typewriter{
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-weight: 600;
+    text-align: justify;
+}
+
+.content .typewriter-text{
+    text-align: justify;
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff;
+}
+
+.content p{
+    font-size: clamp(0.4rem , 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.social-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;    
+    background-color: transparent;
+    border: 0.2rem solid #ffffff;
+    border-radius: 50%;
+    color: #ffffff;
+    margin: 5px 15px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+
+.social-links i:hover{
+    scale: 1.3;
+    color: rgb(255, 255, 255);
+    background-color: #000000;
+    filter: drop-shadow(0 0 10px #fbfbfb);
+
+}
+.cajalinks{
+    display: flex;
+    flex-direction: row column;
+    gap:  5%;
+    
+}
+.custom-button {
+    font-family: Arial, sans-serif;
+    font-size: 100%;
+    color: white;
+    padding: 10px 0px;
+    border-radius: 10px;
+    
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    border: none;
+    margin-top: 20px;
+    background-clip: padding-box;
+    text-decoration: none;
+    transition: 0.2s linear;
+    box-shadow: 0  0 15px rgba(145, 94, 255, 0.782);
+    background-color: transparent;
+    z-index: 1;
+    animation: infinite 3s infinite ease-in-out; 
+}
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 20px rgba(145, 94, 255, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(145, 94, 255, 1);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(145, 94, 255, 0.7);
+    }
+}
+
+.custom-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(145, 94, 255, 1);
+}
+
+.custom-button:hover::before {
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+}
+.custom-button .btnCV {
+    text-decoration: none;
+    color: white;
+    background-color: #35353574;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (max-width:884px) {
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+    .nav-container .links{
+        display: none;
+    }
+
+    .hamburg,
+    .cancel{
+        display: block;
+    }
+
+    .main-container .content{
+        width: 80%;
+    }
+
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (min-width:853px) and (max-width: 1024px){
+    .main-container .image{
+        width: 50%;
+        margin-bottom: 10%;
+        padding: 1%;
+        height: auto;
+    }
+}
+
+
+
+@media (max-width:440px){
+    .main-container .image{
+        width: 50%;
+        height: auto;
+        margin-bottom: 0px;
+    }
+
+    .main-container .content{
+        width: 80%;
+    }
+
+    .main-container button{
+        margin-top: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
