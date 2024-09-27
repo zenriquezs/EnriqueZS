@@ -1,0 +1,142 @@
+:root {
+    --white: #FFFFFF;
+    --light-grey: #D9D9D9;
+    --beaver: #e6e6e6;
+    --black: #141414;
+    --eerie-black: #050816;
+    --jet:  #242737b0;
+}
+
+/* Contacto */
+
+.contacto {
+    background-color: var(--jet);
+    width: 100%;
+    height: auto;
+    padding: 0 2rem 5rem 2rem;
+}
+
+.contacto h1 {
+    display: block;
+    text-align: center;
+    color: var(--white);
+    font-family: 'Cooper Hewitt';
+    font-size: 2.4rem;
+    letter-spacing: .1rem;
+    padding: 6rem 0 4rem 0;
+}
+
+.container_img--contacto {
+    display: none;
+}
+
+.container--contacto {
+    width: 100%;
+    background-color: var(--eerie-black);
+    border-radius: 24px;
+    padding: 3rem;
+    position: relative;
+}
+
+.container_text--contacto {
+    width: 100%;
+}
+
+.container_text--contacto p {
+    font-size: 1.6rem;
+    font-family: 'Cooper Hewitt';
+    color: var(--white);
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+    line-height: 2.3rem;
+}
+
+.form-contact input {
+    font-family: 'Cooper Hewitt';
+    background: transparent;
+    border: 1px solid var(--jet);
+    box-shadow: 0 0 40px rgba(145, 94, 255, 0.889);
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--white);
+    font-size: 1.6rem;
+    outline: none;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.form-contact input::placeholder {
+    color: var(--light-grey);
+}
+
+.form-contact .input-invalid {
+    border: 1px solid #ffffff;
+    color: #574438;
+}
+
+.form-contact textarea {
+    background: transparent;
+    border: 1px solid var(--jet);
+    box-shadow: 0 0 40px rgba(145, 94, 255, 0.889);
+    font-family: 'Cooper Hewitt';
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--white);
+    font-size: 1.6rem;
+    outline: none;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+    resize: none;
+}
+
+.form-contact textarea::placeholder {
+    color: var(--light-grey);
+}
+
+.form-contact textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+.form-contact textarea::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+
+.form-contact textarea::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+}
+
+
+.btn_form--contacto {
+    display: flex;
+    justify-content: center;
+}
+
+.btn_form--contacto button {
+    background: rgba(255, 255, 255, 0.633);
+    border: none;
+    font-family: 'Cooper Hewitt';
+    width: 20rem;
+    padding: .8rem 1rem;
+    border-radius: 1rem;
+    color: #000000;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 1s all;
+}
+
+.btn_form--contacto button:hover {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 20px rgba(145, 94, 255, 0.889);
+    color: var(--black);
+    font-weight: bold;
+    transform: scale(1.1);
+    transition: all .4s ease;
+}
+
+.btn_form--contacto button:active {
+    background: #ffffff;
+}
