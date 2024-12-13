@@ -3748,7 +3748,8 @@ fieldset:disabled .btn {
   color: var(--bs-nav-link-color);
   text-decoration: none;
   background: none;
-  border: 0;
+  
+  
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out;
 }
@@ -3760,16 +3761,21 @@ fieldset:disabled .btn {
 .nav-link:hover,
 .nav-link:focus {
   color: var(--bs-nav-link-hover-color);
+  border-bottom: 1px solid white;
+  
 }
 .nav-link:focus-visible {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(55, 99, 244, 0.25);
+  
 }
 .nav-link.disabled,
 .nav-link:disabled {
   color: var(--bs-nav-link-disabled-color);
   pointer-events: none;
   cursor: default;
+  
+  
 }
 .nav-tabs {
   --bs-nav-tabs-border-width: var(--bs-border-width);
@@ -3789,17 +3795,21 @@ fieldset:disabled .btn {
   border: var(--bs-nav-tabs-border-width) solid transparent;
   border-top-left-radius: var(--bs-nav-tabs-border-radius);
   border-top-right-radius: var(--bs-nav-tabs-border-radius);
+  
+  
 }
 .nav-tabs .nav-link:hover,
 .nav-tabs .nav-link:focus {
   isolation: isolate;
   border-color: var(--bs-nav-tabs-link-hover-border-color);
+  
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: var(--bs-nav-tabs-link-active-color);
   background-color: var(--bs-nav-tabs-link-active-bg);
-  border-color: var(--bs-nav-tabs-link-active-border-color);
+  border-color: var(--bs-nav-tabs-link-active-border-color);  
+  
 }
 .nav-tabs .dropdown-menu {
   margin-top: calc(-1 * var(--bs-nav-tabs-border-width));
@@ -8683,10 +8693,7 @@ fieldset:disabled .btn {
 }
 .bg-secondary {
   --bs-bg-opacity: 1;
-  background-color: rgba(
-    var(--bs-secondary-rgb),
-    var(--bs-bg-opacity)
-  ) !important;
+  background-color: #12eeac;
 }
 .bg-success {
   --bs-bg-opacity: 1;
@@ -12006,6 +12013,7 @@ img::-moz-selection {
 }
 #mainNav.navbar-dark .navbar-nav > li.nav-item > a.nav-link {
   color: rgba(255, 255, 255, 0.85);
+  
 }
 @media (min-width: 992px) {
   #mainNav {
@@ -12013,11 +12021,12 @@ img::-moz-selection {
     background-color: transparent;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem;    
   }
   #mainNav.navbar-shrink {
     border-bottom: 1px solid rgba(45, 45, 45, 0.1);
     background-color: var(--bs-body-bg);
+    
   }
 }
 footer ul li a {

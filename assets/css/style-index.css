@@ -1,3 +1,9 @@
+html {
+    font-size: 90%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--beaver) var(--eerie-black);
+    scroll-behavior: smooth;
+}
 .card img {
     height: 100%;
     width: 100%;
@@ -11,3 +17,24 @@
 .container {
     max-width: 90%;
 }
+
+.animate-container {
+    transition: all 0.3s ease-in-out;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.animate-container img {
+    max-height: 60px;
+    object-fit: contain;
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
