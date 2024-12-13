@@ -1,9 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&display=swap);
-/*!
- * Bootstrap  v5.3.3 (https://getbootstrap.com/)
- * Copyright 2011-2024 The Bootstrap Authors
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+
 :root,
 [data-bs-theme="light"] {
   --bs-blue: #3763f4;
@@ -12057,6 +12053,7 @@ footer ul li a {
 .ref-button:hover,
 .ref-button:active {
   color: #fff;
+
   background-color: #0c3ee1 !important;
 }
 .ref-button:not([disabled]):not(.inactive) {
