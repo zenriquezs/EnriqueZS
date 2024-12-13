@@ -8,27 +8,21 @@
 
     function typeEffect() {
         currentText = texts[currentIndex];
-
         if (isDeleting) {
-            // Borrar texto
             textElement.innerHTML = currentText.substring(0, charIndex--);
         } else {
-            // Escribir texto
             textElement.innerHTML = currentText.substring(0, charIndex++);
         }
-
-        // Cambiar entre escribir y borrar
         if (!isDeleting && charIndex === currentText.length) {
             isDeleting = true;
-            setTimeout(typeEffect, 1000); // Pausa antes de borrar
+            setTimeout(typeEffect, 1000); 
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
-            currentIndex = (currentIndex + 1) % texts.length; // Pasar al siguiente texto
-            setTimeout(typeEffect, 500); // Pausa antes de escribir
+            currentIndex = (currentIndex + 1) % texts.length; 
+            setTimeout(typeEffect, 500); 
         } else {
-            setTimeout(typeEffect, 100); // Velocidad de escritura/borrado
+            setTimeout(typeEffect, 100); 
         }
     }
 
-    // Iniciar el efecto
     document.addEventListener("DOMContentLoaded", typeEffect);
