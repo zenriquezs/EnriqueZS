@@ -1,28 +1,36 @@
-    const texts = ["Desarrollador Web Frontend", "Desarrollador Web Backend"];
-    const textElement = document.getElementById("auto-text");
+const texts = ["Desarrollador Web Frontend", "Desarrollador Web Backend"];
+const textElement = document.getElementById("auto-text");
 
-    let currentIndex = 0;
-    let currentText = "";
-    let isDeleting = false;
-    let charIndex = 0;
+let currentIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-    function typeEffect() {
-        currentText = texts[currentIndex];
-        if (isDeleting) {
-            textElement.innerHTML = currentText.substring(0, charIndex--);
-        } else {
-            textElement.innerHTML = currentText.substring(0, charIndex++);
-        }
-        if (!isDeleting && charIndex === currentText.length) {
-            isDeleting = true;
-            setTimeout(typeEffect, 1000); 
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            currentIndex = (currentIndex + 1) % texts.length; 
-            setTimeout(typeEffect, 500); 
-        } else {
-            setTimeout(typeEffect, 100); 
-        }
+const writeSpeed = 80;
+const deleteSpeed = 40;
+const pauseAfterWrite = 600;
+const pauseAfterDelete = 300;
+
+function typeEffect() {
+    const currentText = texts[currentIndex];
+
+    if (isDeleting) {
+        charIndex--;
+    } else {
+        charIndex++;
     }
 
-    document.addEventListener("DOMContentLoaded", typeEffect);
+    textElement.textContent = currentText.substring(0, charIndex);
+
+    if (!isDeleting && charIndex === currentText.length) {
+        isDeleting = true;
+        setTimeout(typeEffect, pauseAfterWrite);
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        currentIndex = (currentIndex + 1) % texts.length;
+        setTimeout(typeEffect, pauseAfterDelete);
+    } else {
+        setTimeout(typeEffect, isDeleting ? deleteSpeed : writeSpeed);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", typeEffect);
