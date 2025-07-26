@@ -234,7 +234,7 @@ class ParticleSystem {
 class ThemeController {
   constructor() {
     this.themeToggle = document.getElementById("theme-toggle");
-    this.currentTheme = localStorage.getItem("theme") || "light";
+    this.currentTheme = localStorage.getItem("theme") || "dark";
     this.init();
   }
 
