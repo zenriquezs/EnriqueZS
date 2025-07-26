@@ -1,556 +1,719 @@
 <!DOCTYPE html>
-<html data-bs-theme="light" lang="en">
+<html lang="es" data-bs-theme="dark">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title> Enrique ZS - Portafolio Web</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
-    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
-    <link rel="stylesheet" href="assets/css/Features-Centered-Icons-icons.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/CORONA.png">
-    <link rel="stylesheet" href="assets/css/style-index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Enrique Zuñiga - Desarrollador Full Stack especializado en tecnologías web y móviles">
+    <meta name="keywords" content="desarrollador, full stack, javascript, python, react, flutter">
+    <meta name="author" content="Enrique Zuñiga">
+    <meta property="og:title" content="Enrique Zuñiga - Portfolio">
+    <meta property="og:description" content="Desarrollador Full Stack especializado en tecnologías web y móviles">
+    <meta property="og:image" content="./assets/images/herobg.png">
+    <meta property="og:url" content="https://zenriquezs.github.io/EnriqueZS/">
+    <meta property="og:type" content="website">
+    <title>Enrique Zuñiga - Portfolio</title>
+    <link rel="icon" href="assets/images/CORONA.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="./assets/css/style-index.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav id="mainNav" class="navbar navbar-expand-md sticky-top text-light"
-        style="background: rgba(255, 255, 255, 0); backdrop-filter: blur(10px); z-index: 10;">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <span class="bs-icon-sm bs-icon-circle bs-icon-primary">
-                    <img src="assets/images/CORONA.png" alt="ICON ZS" style="width: 60px;">
-                </span>
+            <a class="navbar-brand" href="index.html">
+                <img src="./assets/images/CORONA.png" alt="Logo" class="brand-logo me-4">
             </a>
-            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1">
-                <span class="visually-hidden">Toggle navigation</span>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link text-light active" href="#inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="#experiencia">Experiencia</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="#habilidades">Habilidades</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="#proyectos">Proyectos</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="#certificaciones">Certificaciones</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="#contacto">Contacto</a></li>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item me-3">
+                        <a class="nav-link active" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#experiencia">Experiencia</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#habilidades">Habilidades</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#certificaciones">Certificaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
                 </ul>
             </div>
-            <button class="btn btn-outline-primary me-3" type="button" id="themeToggle" style="display: none;">
-                <span id="themeIcon">
-                </span>
-            </button>
         </div>
     </nav>
 
-    <section id="inicio" class="d-flex align-items-center py-5 mt-5" style="background-image: url('assets/images/herobg.png'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-color: #050816;">
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section min-vh-100 d-flex align-items-center">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6 text-center order-1 order-md-2">
-                    <img src="assets/images/2.png" alt="Enrique ZS" class="img-fluid rounded-circle shadow-lg"
-                        style="max-width: 300px;">
-                </div>
-                <div class="col-md-6 mb-4 mb-md-0 order-2 order-md-1">
-                    <div>
-                        <p class="fs-3 mb-0">Hola!, Soy</p>
-                        <p class="fw-bold display-4">Enrique Zuñiga</p>
+                <div class="col-lg-6 hero-content">
+                    <div class="mb-3">
+                        <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 rounded-pill">
+                            <i class="bi bi-star-fill me-1"></i>Disponible para proyectos
+                        </span>
                     </div>
-                    <h2 class="text-info fs-4">
-                        <span id="auto-text" style="display:inline-block; min-width:280px; white-space:nowrap;"></span>
 
-                    </h2>
-                    <p class="lead">
-                        Estudiante interesado en el desarrollo web tanto Front-End como Back-End. Como persona amante a
-                        los diseños intuitivos y estéticamente agradables, busco crear proyectos que brinden la mejor
-                        experiencia para el usuario.
+                    <p class="hero-greeting">¡Hola! Soy</p>
+                    <h1 class="hero-name">Enrique Zuñiga</h1>
+                    <div class="hero-title" id="typing-text"></div>
+
+                    <p class="hero-description">
+                        Desarrollador Full Stack especializado en crear experiencias digitales
+                        innovadoras y soluciones tecnológicas de vanguardia.
                     </p>
-                    <div class="mt-4">
-                        <a href="assets/docs/ENRIQUE ZUÑIGA ZIÑIGA - CV.pdf" class="btn btn-outline-light me-3"
-                            download="EnriqueZS-CV.pdf">Descargar CV</a>
-                        <a href="#contacto" class="btn btn-outline-info">Contáctame</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="experiencia" class="py-5 mt-5">
-        <div class="container bg-primary-gradient py-5">
-            <h2 class="text-center fw-bold mb-5">Mi Experiencia</h2>
-            <div class="row gy-4">
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">INNOVATEC 2024</h5>
-                            <span class="d-block text-muted mb-2 small">Participación Destacada en Innovación
-                                Tecnológica</span>
-                            <p class="card-text">GeoTransport Shield - Prototipo IoT para Monitoreo y Prevención de
-                                Robos. Formé parte del equipo de desarrollo tecnológico del prototipo GeoTransport
-                                Shield, presentado en Innovatec 2024. Este proyecto, basado en tecnologías IoT como LoRa
-                                y GPS, obtuvo reconocimiento por su enfoque innovador en el monitoreo de transporte de
-                                carga en tiempo real, destacando su viabilidad técnica y su impacto positivo en la
-                                seguridad en carreteras.</p>
-                            <div class="mt-3">
-                                <span class="badge bg-secondary">LoRa</span>
-                                <span class="badge bg-secondary">C++</span>
-                                <span class="badge bg-secondary">Node Red</span>
-                                <span class="badge bg-secondary">Grafana</span>
-                                <span class="badge bg-secondary">Influx DB</span>
-                            </div>
-                        </div>
+                    <div class="hero-actions mb-4">
+                        <a href="#proyectos" class="btn btn-primary">
+                            <i class="bi bi-eye me-2"></i>Ver Proyectos
+                        </a>
+                        <a href="./assets/docs/ENRIQUE ZUÑIGA ZIÑIGA - CV.pdf" class="btn btn-outline-primary"
+                            target="_blank">
+                            <i class="bi bi-download me-2"></i>Descargar CV
+                        </a>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">CONAINTE 2024</h5>
-                            <span class="d-block text-muted mb-2 small">Coautor en Publicación de Artículo</span>
-                            <p class="card-text">Desarrollo de un Sistema de Información para la Gestión de Proyectos
-                                Ambientales. Contribuí al desarrollo tecnológico de un sistema de información diseñado
-                                para administrar datos ambientales relacionados con emisiones de gases de efecto
-                                invernadero (CO2, CH4, N2O), destacando su funcionalidad en la recopilación, análisis y
-                                generación de reportes que apoyan la toma de decisiones estratégicas en instituciones
-                                públicas y privadas.</p>
-                            <div class="mt-3">
-                                <span class="badge bg-secondary">HTML</span>
-                                <span class="badge bg-secondary">CSS</span>
-                                <span class="badge bg-secondary">JavaScript</span>
-                                <span class="badge bg-secondary">MySQL</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">REINGTEC</h5>
-                            <span class="d-block text-muted mb-2 small">Coautor en Publicación de Artículo</span>
-                            <p class="card-text">Desarrollo del Prototipo para el Seguimiento de Transporte con
-                                Tecnología IoT. Participé en el diseño y desarrollo tecnológico de un sistema basado en
-                                LoRa y GPS para prevenir robos de transporte de carga en las carreteras de Hidalgo. El
-                                proyecto incluyó la integración de hardware y software, validación en entorno
-                                controlado, y evaluación de viabilidad técnica y operativa.</p>
-                            <div class="mt-3">
-                                <span class="badge bg-secondary">Escritura</span>
-                                <span class="badge bg-secondary">Edición</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="habilidades" class="py-5 mt-5">
-        <div class="container bg-primary-gradient py-5">
-            <h2 class="text-center fw-bold mb-5">Habilidades</h2>
-            <div class="row text-center">
-                <!-- HTML5 -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/icon-html.png" alt="HTML5" class="img-fluid mb-2 animate-icon">
-                        <p>HTML5</p>
-                    </div>
-                </div>
-                <!-- CSS3 -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/icon-css.png" alt="CSS3" class="img-fluid mb-2 animate-icon">
-                        <p>CSS3</p>
-                    </div>
-                </div>
-                <!-- JavaScript -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/icon-js.png" alt="JavaScript" class="img-fluid mb-2 animate-icon">
-                        <p>JavaScript</p>
-                    </div>
-                </div>
-                <!-- Tailwind -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/icon-tailwind.png" alt="Tailwind" class="img-fluid mb-2 animate-icon">
-                        <p>Tailwind</p>
-                    </div>
-                </div>
-                <!-- Bootstrap -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/10.png" alt="Bootstrap" class="img-fluid mb-2 animate-icon">
-                        <p>Bootstrap</p>
-                    </div>
-                </div>
-                <!-- Git -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/icon-git.png" alt="Git" class="img-fluid mb-2 animate-icon">
-                        <p>Git</p>
-                    </div>
-                </div>
-                <!-- GitHub -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/icon-github-hab.png" alt="GitHub" class="img-fluid mb-2 animate-icon">
-                        <p>GitHub</p>
-                    </div>
-                </div>
-                <!-- Python -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/Python.png" alt="Python" class="img-fluid mb-2 animate-icon">
-                        <p>Python</p>
-                    </div>
-                </div>
-                <!-- Firebase -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/Firebase.png" alt="Firebase" class="img-fluid mb-2 animate-icon">
-                        <p>Firebase</p>
-                    </div>
-                </div>
-                <!-- MySQL -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/MySQL.png" alt="MySQL" class="img-fluid mb-2 animate-icon">
-                        <p>MySQL</p>
-                    </div>
-                </div>
-                <!-- SQL Server -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/SQL Server.png" alt="SQL Server" class="img-fluid mb-2 animate-icon">
-                        <p>SQL Server</p>
-                    </div>
-                </div>
-                <!-- React Native -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/react native.png" alt="React Native"
-                            class="img-fluid mb-2 animate-icon">
-                        <p>React Native</p>
-                    </div>
-                </div>
-                <!-- Dart -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/dart.png" alt="Dart" class="img-fluid mb-2 animate-icon">
-                        <p>Dart</p>
-                    </div>
-                </div>
-                <!-- C# -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/ch.png" alt="C#" class="img-fluid mb-2 animate-icon">
-                        <p>C#</p>
-                    </div>
-                </div>
-                <!-- C -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/c.png" alt="C" class="img-fluid mb-2 animate-icon">
-                        <p>C</p>
-                    </div>
-                </div>
-                <!-- C++ -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/c++.png" alt="C++" class="img-fluid mb-2 animate-icon">
-                        <p>C++</p>
-                    </div>
-                </div>
-                <!-- FPDF -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/fpdf.gif" alt="FPDF" class="img-fluid mb-2 animate-icon">
-                        <p>FPDF</p>
-                    </div>
-                </div>
-                <!-- PHP -->
-                <div class="col-6 col-md-2 mb-4">
-                    <div class="p-3 border rounded shadow-sm animate-container hover-effect">
-                        <img src="assets/images/PHP.png" alt="PHP" class="img-fluid mb-2 animate-icon">
-                        <p>PHP</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="proyectos" class="py-5 mt-5">
-        <div class="container bg-primary-gradient py-5">
-            <h2 class="text-center fw-bold mb-5">Proyectos</h2>
-            <div class="row g-4">
-                <!-- Card 1 -->
-                <div class="col-md-4">
-                    <div class="card h-100 border-0   rounded">
-                        <img src="assets/images/P1.png" class="card-img-top rounded-top" alt="Portafolio Web">
-                        <div class="card-body bg-dark text-light rounded-bottom">
-                            <h5 class="card-title fw-bold">Portafolio Web</h5>
-                            <p class="card-text">Diseño y desarrollo de un portafolio web interactivo utilizando
-                                tecnologías modernas como HTML, Bootstrap y JavaScript. Este proyecto muestra mis
-                                habilidades y proyectos destacados de manera visual y profesional.</p>
-                                
-                            <div class="d-flex gap-2 mt-3">
-                                <a href="https://zenriquezs.github.io/EnriqueZS/"
-                                    class="btn btn-outline-light d-flex align-items-center gap-1">
-                                    <i class="bi bi-eye"></i> Demo
-                                </a>
-                                <a href="https://github.com/zenriquezs/EnriqueZS"
-                                    class="btn btn-outline-light d-flex align-items-center gap-1">
-                                    <i class="bi bi-github"></i> Repositorio
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="col-md-4">
-                    <div class="card h-100 border-0   rounded">
-                        <img src="assets/images/PROYECTO 2.jpg" class="card-img-top rounded-top"
-                            alt="GeoTransport Shield">
-                        <div class="card-body bg-dark text-light rounded-bottom">
-                            <h5 class="card-title fw-bold">GeoTransport Shield</h5>
-                            <p class="card-text">Desarrollo de un sistema IoT basado en LoRa y GPS para monitoreo y
-                                prevención de robos de transporte de carga. El proyecto fue presentado en Innovatec
-                                2024, destacando su impacto en la seguridad vial.</p>
-                            <div class="d-flex gap-2 mt-3">
-                                <a href="https://github.com/zenriquezs/GEOTRANSPORT-SHIELD"
-                                    class="btn btn-outline-light d-flex align-items-center gap-1">
-                                    <i class="bi bi-eye"></i> Demo
-                                </a>
-                                <a href="https://github.com/zenriquezs/GEOTRANSPORT-SHIELD"
-                                    class="btn btn-outline-light d-flex align-items-center gap-1">
-                                    <i class="bi bi-github"></i> Repositorio
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="col-md-4">
-                    <div class="card h-100 border-0   rounded">
-                        <img src="assets/images/P3.png" class="card-img-top rounded-top"
-                            alt="Calculadora de Gases de Efecto Invernadero">
-                        <div class="card-body bg-dark text-light rounded-bottom">
-                            <h5 class="card-title fw-bold">Calculadora de Gases de Efecto Invernadero</h5>
-                            <p class="card-text">Herramienta interactiva diseñada para calcular las emisiones de gases
-                                de efecto invernadero (CO2, CH4, N2O) en diversas actividades, facilitando la toma de
-                                decisiones ambientales estratégicas.</p>
-                            <div class="d-flex gap-2 mt-3">
-                                <a href="https://github.com/zenriquezs/CalculadoraGasesEfectoInvernadero"
-                                    class="btn btn-outline-light d-flex align-items-center gap-1">
-                                    <i class="bi bi-eye"></i> Demo
-                                </a>
-                                <a href="https://github.com/zenriquezs/CalculadoraGasesEfectoInvernadero"
-                                    class="btn btn-outline-light d-flex align-items-center gap-1">
-                                    <i class="bi bi-github"></i> Repositorio
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="certificaciones" class="py-3 mt-5">
-        <div class="container bg-primary-gradient py-4">
-            <h2 class="text-center fw-bold mb-4">Certificaciones</h2>
-            <div class="row g-3">
-                <div class="col-md-3">
-                    <div class="card border-0 rounded h-100">
-                        <img src="assets/images/1.jpg" class="card-img-top rounded-top" alt="Certificación 1">
-                        <div class="card-body bg-dark text-light rounded-bottom" style="min-height: 150px;">
-                            <h6 class="card-title fw-bold">CCNAv7: Introduction to Networks</h6>
-                            <div class="d-flex gap-2 mt-2">
-                                <a href="https://www.credly.com/badges/9b2d9731-4263-48da-99b0-4f56f464faa6/linked_in_profile"
-                                    class="btn btn-outline-light btn-sm">Ver Certificación</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card border-0 rounded h-100">
-                        <img src="assets/images/4.jpg" class="card-img-top rounded-top" alt="Certificación 2">
-                        <div class="card-body bg-dark text-light rounded-bottom" style="min-height: 150px;">
-                            <h6 class="card-title fw-bold">Introduction to Python Programming</h6>
-                            <div class="d-flex gap-2 mt-2">
-                                <a href="https://app.dataquest.io/verify_cert/QUHYR065UBMLTCHLY4WV/"
-                                    class="btn btn-outline-light btn-sm">Ver Certificación</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card border-0 rounded h-100">
-                        <img src="assets/images/2.jpg" class="card-img-top rounded-top" alt="Certificación 4">
-                        <div class="card-body bg-dark text-light rounded-bottom" style="min-height: 150px;">
-                            <h6 class="card-title fw-bold">Introducción a IoT</h6>
-                            <div class="d-flex gap-2 mt-2">
-                                <a href="https://www.credly.com/badges/9dcf1aee-fc0e-4f7c-8b6e-057a0ae39686/linked_in_profile"
-                                    class="btn btn-outline-light btn-sm">Ver Certificación</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card border-0 rounded h-100">
-                        <img src="assets/images/9.jpg" class="card-img-top rounded-top" alt="Certificación 5">
-                        <div class="card-body bg-dark text-light rounded-bottom" style="min-height: 150px;">
-                            <h6 class="card-title fw-bold">Desarrollo de Apps Móviles</h6>
-                            <div class="d-flex gap-2 mt-2">
-                                <a href="https://skillshop.exceedlms.com/student/award/aYtiAYG42mioiPxDttPte96Z"
-                                    class="btn btn-outline-light btn-sm">Ver Certificación</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card border-0 rounded h-100">
-                        <img src="assets/images/7.jpg" class="card-img-top rounded-top" alt="Certificación 6">
-                        <div class="card-body bg-dark text-light rounded-bottom" style="min-height: 150px;">
-                            <h6 class="card-title fw-bold">Introducción al desarrollo web: HTML y CSS (1/2)</h6>
-                            <div class="d-flex gap-2 mt-2">
-                                <a href="https://skillshop.exceedlms.com/student/award/oSbwBiTB7j8BumPMLSwuvN7e"
-                                    class="btn btn-outline-light btn-sm">Ver Certificación</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card border-0 rounded h-100">
-                        <img src="assets/images/3.jpg" class="card-img-top rounded-top" alt="Certificación 7">
-                        <div class="card-body bg-dark text-light rounded-bottom" style="min-height: 150px;">
-                            <h6 class="card-title fw-bold">CCNAv7: Switching, Routing, and Wireless Essentials</h6>
-                            <div class="d-flex gap-2 mt-2">
-                                <a href="https://www.credly.com/badges/24043017-44ff-43f7-91ec-3470cd0a9510/linked_in_profile"
-                                    class="btn btn-outline-light btn-sm">Ver Certificación</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card border-0 rounded h-100">
-                        <img src="assets/images/8.jpg" class="card-img-top rounded-top" alt="Certificación 8">
-                        <div class="card-body bg-dark text-light rounded-bottom" style="min-height: 150px;">
-                            <h6 class="card-title fw-bold">Ciberseguridad en el Teletrabajo</h6>
-                            <div class="d-flex gap-2 mt-2">
-                                <a href="https://skillshop.exceedlms.com/student/award/Nw4WVcLMH5A5b46daQSzY7ap"
-                                    class="btn btn-outline-light btn-sm">Ver Certificación</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card border-0 rounded h-100">
-                        <img src="assets/images/6.jpg" class="card-img-top rounded-top" alt="Certificación 9">
-                        <div class="card-body bg-dark text-light rounded-bottom" style="min-height: 150px;">
-                            <h6 class="card-title fw-bold">Introducción al desarrollo web: HTML y CSS (2/2)</h6>
-                            <div class="d-flex gap-2 mt-2">
-                                <a href="https://skillshop.exceedlms.com/student/award/fNz1rfJCqA3cKmC2SpwNH6rh"
-                                    class="btn btn-outline-light btn-sm">Ver Certificación</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contacto" class="py-5 mt-5">
-        <div class="container bg-primary-gradient py-5">
-            <h2 class="text-center fw-bold mb-5">Contacto</h2>
-            <form id="form" class="bg-dark text-light p-4 rounded ">
-                <div class="mb-3">
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="name" placeholder="Tu nombre" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Tu correo" required>
-                </div>
-                <div class="mb-3">
-                    <label for="asunto" class="form-label">Asunto</label>
-                    <input type="text" class="form-control" id="asunto" name="affair" placeholder="Asunto del mensaje"
-                        required>
-                </div>
-                <div class="mb-3">
-                    <label for="mensaje" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="mensaje" name="message" rows="4" placeholder="Tu mensaje"
-                        required></textarea>
-                </div>
-                <button type="submit" class="btn btn-outline-light">Enviar</button>
-            </form>
-        </div>
-    </section>
-
-    <script type="module" src="assets/js/contactos.js"></script>
-
-    <footer class="bg-primary-gradient text-light">
-        <div class="container py-4 py-lg-5">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-md-6 text-center text-md-st art mb-3 mb-md-0">
-                    <p class="mb-0">&copy; 2024 Enrique Zuñiga Zuñiga. Todos los derechos reservados.</p>
-
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-1">Conéctate conmigo:</p>
-                    <div class="social-icons">
-                        <a href="https://x.com/ZuigaZuigaEnri1" target="_blank" class="text-light me-3 fs-5"><i
-                                class="bi bi-twitter"></i></a>
-                        <a href="https://github.com/zenriquezs" target="_blank" class="text-light me-3 fs-5"><i
-                                class="bi bi-github"></i></a>
+                    <!-- Social Links -->
+                    <div class="d-flex gap-3">
+                        <a href="https://github.com/zenriquezs" target="_blank" class="text-decoration-none">
+                            <i class="bi bi-github fs-4 text-primary"></i>
+                        </a>
                         <a href="https://www.linkedin.com/in/enrique-zu%C3%B1iga-zu%C3%B1iga-6118b82b0/" target="_blank"
-                            class="text-light me-3 fs-5"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://zenriquezs.github.io/EnriqueZS/" target="_blank" class="text-light fs-5"><i
-                                class="bi bi-globe"></i></a>
+                            class="text-decoration-none">
+                            <i class="bi bi-linkedin fs-4 text-primary"></i>
+                        </a>
+                        <a href="https://zenriquezs.github.io/EnriqueZS/" target="_blank" class="text-decoration-none">
+                            <i class="bi bi-globe fs-4 text-primary"></i>
+                        </a>
+                        <a href="mailto:zenrizu@gmail.com" class="text-decoration-none">
+                            <i class="bi bi-envelope fs-4 text-primary"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 hero-image">
+                    <div class="text-center">
+                        <img src="./assets/images/2.png" alt="Enrique Zuñiga" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experiencia" class="py-5">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Experiencia</h2>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="timeline">
+                        <!-- Teteocan Technologies -->
+                        <div class="card mb-4 animate-on-scroll">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div>
+                                        <h5 class="card-title mb-1">Becario de Ingeniería de Intraemprendimiento</h5>
+                                        <h6 class="card-subtitle text-muted">Teteocan Technologies</h6>
+                                        <small class="text-muted"><i class="bi bi-geo-alt me-1"></i>Estado de México, México</small>
+                                    </div>
+                                    <span class="badge bg-primary">Mayo 2025 - Actualidad</span>
+                                </div>
+                                <div class="mb-3">
+                                    <p class="card-text mb-2">• Participo en el desarrollo de plataformas web enfocadas en la innovación digital.</p>
+                                    <p class="card-text mb-2">• Desarrollo funcionalidades específicas como sistemas de autenticación, gestión de usuarios y formularios interactivos con validación de datos.</p>
+                                    <p class="card-text mb-0">• Aplico metodologías ágiles (Scrum) para planificar, dividir tareas y dar seguimiento a entregables en ciclos semanales de trabajo.</p>
+                                </div>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-secondary">Scrum</span>
+                                    <span class="badge bg-secondary">Autenticación</span>
+                                    <span class="badge bg-secondary">Gestión de Usuarios</span>
+                                    <span class="badge bg-secondary">Validación de Datos</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Freelancer.com -->
+                        <div class="card mb-4 animate-on-scroll">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div>
+                                        <h5 class="card-title mb-1">Desarrollador Web Freelancer</h5>
+                                        <h6 class="card-subtitle text-muted">Freelancer.com</h6>
+                                        <small class="text-muted"><i class="bi bi-globe me-1"></i>Remoto</small>
+                                    </div>
+                                    <span class="badge bg-success">Enero 2024 - Marzo 2025</span>
+                                </div>
+                                <div class="mb-3">
+                                    <p class="card-text mb-2">Desarrollé soluciones web personalizadas para clientes internacionales a través de la plataforma Freelancer, cubriendo desde landing pages hasta aplicaciones dinámicas.</p>
+                                    <p class="card-text mb-2">• Implementé interfaces responsivas utilizando HTML, CSS, JavaScript y React, garantizando compatibilidad en dispositivos móviles y navegadores modernos.</p>
+                                    <p class="card-text mb-0">• Integré formularios con validación, envío automatizado de datos y conexión a bases de datos como Firebase y MySQL para almacenar información de forma segura.</p>
+                                </div>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-secondary">HTML</span>
+                                    <span class="badge bg-secondary">CSS</span>
+                                    <span class="badge bg-secondary">JavaScript</span>
+                                    <span class="badge bg-secondary">React</span>
+                                    <span class="badge bg-secondary">Firebase</span>
+                                    <span class="badge bg-secondary">MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Campeonato Nacional de Robótica -->
+                        <div class="card mb-4 animate-on-scroll">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div>
+                                        <h5 class="card-title mb-1">XVI Campeonato Nacional de Robótica y Habilidades STEM 2025</h5>
+                                        <h6 class="card-subtitle text-muted">Categoría: Internet de las Cosas (IoT)</h6>
+                                        <small class="text-muted"><i class="bi bi-geo-alt me-1"></i>Hidalgo, México</small>
+                                    </div>
+                                    <span class="badge bg-warning">2025</span>
+                                </div>
+                                <div class="mb-3">
+                                    <p class="card-text mb-0">Obtuvimos el <strong>primer lugar en la fase estatal</strong> en la categoría de Internet de las Cosas (IoT).</p>
+                                </div>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-secondary">IoT</span>
+                                    <span class="badge bg-secondary">Robótica</span>
+                                    <span class="badge bg-secondary">STEM</span>
+                                    <span class="badge bg-warning">1er Lugar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="habilidades" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Habilidades Técnicas</h2>
+
+            <div class="row g-3">
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/icon-js.png" alt="JavaScript" class="mb-3">
+                        <h6 class="fw-semibold">JavaScript</h6>
+                        <p class="text-muted small mb-0">Frontend</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/Python.png" alt="Python" class="mb-3">
+                        <h6 class="fw-semibold">Python</h6>
+                        <p class="text-muted small mb-0">Backend</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/icon-html.png" alt="HTML5" class="mb-3">
+                        <h6 class="fw-semibold">HTML5</h6>
+                        <p class="text-muted small mb-0">Frontend</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/icon-css.png" alt="CSS3" class="mb-3">
+                        <h6 class="fw-semibold">CSS3</h6>
+                        <p class="text-muted small mb-0">Frontend</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/icon-tailwind.png" alt="Tailwind" class="mb-3">
+                        <h6 class="fw-semibold">Tailwind</h6>
+                        <p class="text-muted small mb-0">Frontend</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/10.png" alt="Bootstrap" class="mb-3">
+                        <h6 class="fw-semibold">Bootstrap</h6>
+                        <p class="text-muted small mb-0">Frontend</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/icon-git.png" alt="Git" class="mb-3">
+                        <h6 class="fw-semibold">Git</h6>
+                        <p class="text-muted small mb-0">Control de versiones</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/icon-github-hab.png" alt="GitHub" class="mb-3">
+                        <h6 class="fw-semibold">GitHub</h6>
+                        <p class="text-muted small mb-0">Repositorios</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/Firebase.png" alt="Firebase" class="mb-3">
+                        <h6 class="fw-semibold">Firebase</h6>
+                        <p class="text-muted small mb-0">Backend</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/MySQL.png" alt="MySQL" class="mb-3">
+                        <h6 class="fw-semibold">MySQL</h6>
+                        <p class="text-muted small mb-0">Base de datos</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/SQL Server.png" alt="SQL Server" class="mb-3">
+                        <h6 class="fw-semibold">SQL Server</h6>
+                        <p class="text-muted small mb-0">Base de datos</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/react native.png" alt="React Native" class="mb-3">
+                        <h6 class="fw-semibold">React Native</h6>
+                        <p class="text-muted small mb-0">Móvil</p>
+                    </div>
+                </div>
+
+                <!-- Dart -->
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/dart.png" alt="Dart" class="mb-3">
+                        <h6 class="fw-semibold">Dart</h6>
+                        <p class="text-muted small mb-0">Lenguaje</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/ch.png" alt="C#" class="mb-3">
+                        <h6 class="fw-semibold">C#</h6>
+                        <p class="text-muted small mb-0">Lenguaje</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/c.png" alt="C" class="mb-3">
+                        <h6 class="fw-semibold">C</h6>
+                        <p class="text-muted small mb-0">Lenguaje</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/c++.png" alt="C++" class="mb-3">
+                        <h6 class="fw-semibold">C++</h6>
+                        <p class="text-muted small mb-0">Lenguaje</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/fpdf.gif" alt="FPDF" class="mb-3">
+                        <h6 class="fw-semibold">FPDF</h6>
+                        <p class="text-muted small mb-0">PDF Generator</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-3 col-sm-4 col-6 animate-on-scroll">
+                    <div class="skill-item h-100">
+                        <img src="./assets/images/PHP.png" alt="PHP" class="mb-3">
+                        <h6 class="fw-semibold">PHP</h6>
+                        <p class="text-muted small mb-0">Backend</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="proyectos" class="py-5">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Proyectos Destacados</h2>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="card h-100">
+                        <img src="./assets/images/PROYECTO1.png" class="card-img-top" alt="Proyecto 1">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Sistema de Gestión</h5>
+                            <p class="card-text flex-grow-1">
+                                Aplicación web completa para gestión empresarial con dashboard interactivo y reportes en
+                                tiempo real.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary">React</span>
+                                <span class="badge bg-success">Node.js</span>
+                                <span class="badge bg-warning">MySQL</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <a href="#" class="btn btn-primary btn-sm flex-fill">
+                                    <i class="bi bi-eye me-1"></i>Ver Demo
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="card h-100">
+                        <img src="./assets/images/PROYECTO 2.jpg" class="card-img-top" alt="Proyecto 2">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">App Móvil E-commerce</h5>
+                            <p class="card-text flex-grow-1">
+                                Aplicación móvil multiplataforma para comercio electrónico con pasarela de pagos
+                                integrada.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-info">Flutter</span>
+                                <span class="badge bg-warning">Firebase</span>
+                                <span class="badge bg-success">Stripe</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <a href="#" class="btn btn-primary btn-sm flex-fill">
+                                    <i class="bi bi-eye me-1"></i>Ver Demo
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="card h-100">
+                        <img src="./assets/images/P3.png" class="card-img-top" alt="Proyecto 3">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Dashboard Analytics</h5>
+                            <p class="card-text flex-grow-1">
+                                Panel de control con visualización de datos en tiempo real y análisis predictivo.
+                            </p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-warning">Python</span>
+                                <span class="badge bg-info">Django</span>
+                                <span class="badge bg-success">Chart.js</span>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <a href="#" class="btn btn-primary btn-sm flex-fill">
+                                    <i class="bi bi-eye me-1"></i>Ver Demo
+                                </a>
+                                <a href="#" class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certificaciones" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Certificaciones</h2>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 animate-on-scroll">
+                    <div class="card h-100">
+                        <!-- Espacio para imagen del certificado -->
+                        <div class="certificate-image-container p-3 text-center bg-light">
+                            <img src="./assets/images/4.jpg" 
+                                 alt="Certificado Responsive Web Design" 
+                                 class="img-fluid rounded shadow-sm"
+                                 style="max-height: 200px; object-fit: contain;"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <!-- Placeholder si no hay imagen -->
+                            <div class="certificate-placeholder d-none" style="height: 200px; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 8px;">
+                                <div class="text-center text-muted">
+                                    <i class="bi bi-image" style="font-size: 3rem;"></i>
+                                    <p class="mt-2 mb-0">Imagen del certificado</p>
+                                    <small>Próximamente</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Responsive Web Design</h5>
+                            <p class="card-text text-muted">Certificación de freeCodeCamp representando aproximadamente 300 horas de trabajo</p>
+                            <p class="text-muted small mb-3">
+                                <i class="bi bi-calendar me-1"></i>Junio 2025 • ID: enriquezs-rwd
+                            </p>
+                            <div class="mb-3">
+                                <a href="https://freecodecamp.org/certification/EnriqueZS/responsive-web-design" target="_blank" class="btn btn-primary btn-sm me-2">
+                                    <i class="bi bi-eye me-1"></i>Ver Certificado
+                                </a>
+                                <a href="https://freecodecamp.org/certification/EnriqueZS/responsive-web-design" target="_blank" class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-share me-1"></i>Verificar
+                                </a>
+                            </div>
+                            <div class="mt-auto">
+                                <span class="badge bg-primary">HTML5</span>
+                                <span class="badge bg-primary">CSS3</span>
+                                <span class="badge bg-primary">Responsive Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-5">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Contacto</h2>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6 animate-on-scroll">
+                    <div class="mb-4">
+                        <h3 class="h4 mb-3">¡Trabajemos juntos!</h3>
+                        <p class="text-muted">
+                            ¿Tienes un proyecto en mente? Me encantaría escuchar tus ideas
+                            y ayudarte a convertirlas en realidad.
+                        </p>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-envelope-fill text-primary fs-4"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6 class="mb-1">Email</h6>
+                                    <a href="mailto:zenrizu@gmail.com"
+                                        class="text-decoration-none">zenrizu@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-telephone-fill text-primary fs-4"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6 class="mb-1">Teléfono</h6>
+                                    <a href="tel:+7721424369" class="text-decoration-none">+772 142 4369</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-geo-alt-fill text-primary fs-4"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6 class="mb-1">Ubicación</h6>
+                                    <span class="text-muted">Hidalgo, México</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0">
+                                    <i class="bi bi-clock-fill text-primary fs-4"></i>
+                                </div>
+                                <div class="flex-grow-1 ms-3">
+                                    <h6 class="mb-1">Disponibilidad</h6>
+                                    <span class="text-muted">Lun - Vie, 9AM - 6PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 animate-on-scroll">
+                    <div class="card border-0 shadow">
+                        <div class="card-body p-4">
+                            <form id="contact-form">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre"
+                                                required>
+                                            <label for="nombre">Nombre completo</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email"
+                                                placeholder="tu@email.com" required>
+                                            <label for="email">Email</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="asunto" placeholder="Asunto"
+                                                required>
+                                            <label for="asunto">Asunto</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" id="mensaje" placeholder="Tu mensaje"
+                                                style="height: 120px" required></textarea>
+                                            <label for="mensaje">Mensaje</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary w-100">
+                                            <i class="bi bi-send me-2"></i>Enviar Mensaje
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="./assets/images/ICONZSF.png" alt="Logo" width="40" height="40"
+                            class="rounded-circle me-2">
+                        <h5 class="mb-0">EnriqueZS</h5>
+                    </div>
+                    <p class="text-light opacity-75 mb-3">
+                        Desarrollador Full Stack apasionado por crear soluciones tecnológicas innovadoras.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="https://github.com/zenriquezs" target="_blank" class="text-light">
+                            <i class="bi bi-github fs-5"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/enrique-zu%C3%B1iga-zu%C3%B1iga-6118b82b0/" target="_blank"
+                            class="text-light">
+                            <i class="bi bi-linkedin fs-5"></i>
+                        </a>
+                        <a href="https://zenriquezs.github.io/EnriqueZS/" target="_blank" class="text-light">
+                            <i class="bi bi-globe fs-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h6 class="text-light mb-3">Enlaces</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#inicio" class="text-light opacity-75 text-decoration-none">Inicio</a>
+                        </li>
+                        <li class="mb-2"><a href="#experiencia"
+                                class="text-light opacity-75 text-decoration-none">Experiencia</a></li>
+                        <li class="mb-2"><a href="#proyectos"
+                                class="text-light opacity-75 text-decoration-none">Proyectos</a></li>
+                        <li class="mb-2"><a href="#contacto"
+                                class="text-light opacity-75 text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h6 class="text-light mb-3">Contacto</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="bi bi-envelope me-2"></i>
+                            <a href="mailto:zenrizu@gmail.com"
+                                class="text-light opacity-75 text-decoration-none">zenrizu@gmail.com</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-telephone me-2"></i>
+                            <a href="tel:+7721424369" class="text-light opacity-75 text-decoration-none">+772 142
+                                4369</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="bi bi-geo-alt me-2"></i>
+                            <span class="text-light opacity-75">Hidalgo, México</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-4 mb-4">
+                    <h6 class="text-light mb-3">Tecnologías</h6>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-primary">JavaScript</span>
+                        <span class="badge bg-success">Python</span>
+                        <span class="badge bg-info">React</span>
+                        <span class="badge bg-warning">Flutter</span>
+                        <span class="badge bg-secondary">Firebase</span>
+                        <span class="badge bg-dark">MySQL</span>
                     </div>
                 </div>
             </div>
 
-            <hr class="my-4 opacity-75">
+            <hr class="my-4 opacity-25">
 
-            <div class="row text-center">
-                <div class="col-md-4 mb-3">
-                    <h6>Enlaces Rápidos</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-light text-decoration-none">Inicio</a></li>
-                        <li><a href="https://zenriquezs.github.io/EnriqueZS/"
-                                class="text-light text-decoration-none">Portafolio</a></li>
-                    </ul>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-light opacity-75">
+                        © 2024 Enrique Zuñiga. Todos los derechos reservados.
+                    </p>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <h6>Contacto</h6>
-                    <ul class="list-unstyled">
-                        <li>Email: <a href="mailto:zenrizu@gmail.com"
-                                class="text-light text-decoration-none">zenrizu@gmail.com</a></li>
-                        <li>Teléfono: <a href="tel:+7721424369" class="text-light text-decoration-none">+772 142
-                                4369</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h6>Ubicación</h6>
-                    <p class="mb-0">Mixquiahuala de Juárez</p>
-                    <p>Hidalgo, México</p>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 text-light opacity-75">
+                        Hecho con <i class="bi bi-heart-fill text-danger"></i>
+                    </p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="assets/js/image-configuration.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/script-navbar.js"></script>
-    <script src="assets/js/script.js"></script>
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
