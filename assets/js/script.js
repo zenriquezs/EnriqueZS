@@ -276,7 +276,7 @@ class ThemeController {
 
         document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
         
-        console.log(`🎨 Tema cambiado a: ${theme}`);
+        
     }
 }
 
@@ -451,6 +451,35 @@ class PortfolioEffects {
         this.setupFormValidation();
     }
     
+    setupParallax() {
+        const heroSection = document.querySelector('.hero-section');
+        
+        if (heroSection) {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * -0.5;
+                
+                if (scrolled < window.innerHeight) {
+                    heroSection.style.transform = `translateY(${rate}px)`;
+                }
+            });
+        }
+        
+        const parallaxElements = document.querySelectorAll('.parallax');
+        
+        if (parallaxElements.length > 0) {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                
+                parallaxElements.forEach(element => {
+                    const speed = element.dataset.speed || 0.5;
+                    const yPos = -(scrolled * speed);
+                    element.style.transform = `translateY(${yPos}px)`;
+                });
+            });
+        }
+    }
+    
  
     setupCounters() {    
         const counters = document.querySelectorAll('.counter');
@@ -495,8 +524,7 @@ class PortfolioEffects {
             contactForm.addEventListener('submit', (e) => {
                 e.preventDefault();
                 
-
-                console.log('📧 Formulario enviado');
+                
                 
 
                 this.showNotification('¡Mensaje enviado correctamente!', 'success');
@@ -558,9 +586,9 @@ class PortfolioApp {
 
             new PortfolioEffects();
             
-            console.log('✅ Portafolio inicializado correctamente');
+           
         } catch (error) {
-            console.error('❌ Error al inicializar:', error);
+           
         }
     }
 }
