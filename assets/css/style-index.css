@@ -1026,8 +1026,12 @@ section {
   .card {
     margin-bottom: var(--spacing-md);
   }
-  
+  .hero-image{
+    padding-top: 15%;
+  }
+
   .profile-image {
+    
     width: 280px;
     height: 280px;
   }
