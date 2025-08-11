@@ -1180,3 +1180,105 @@ section {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--glass-bg-hover);
 }
+
+/* Estilos para la sección de proyectos */
+.project-filters {
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  margin: 0.25rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--border-radius-lg);
+  transition: var(--transition-normal);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 2px solid var(--glass-border);
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--text-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Mejoras para las tarjetas de proyecto */
+.project-card {
+  transition: var(--transition-normal);
+  opacity: 1;
+  transform: scale(1);
+}
+
+.project-card.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  transition: var(--transition-normal);
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Efecto overlay en las imágenes */
+.project-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
+}
+
+.project-image-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(99, 102, 241, 0.8), rgba(0, 102, 255, 0.8));
+  opacity: 0;
+  transition: var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image-container:hover::after {
+  opacity: 1;
+}
+
+/* Indicadores de estado del proyecto */
+.project-status {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 3;
+}
+
+.status-badge {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  color: var(--text-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--border-radius-md);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--glass-border);
+}
+
+.status-badge.completed {
+  background: var(--success-color);
+  color: white;
+}
+
+.status-badge.in-progress {
+  background: var(--warning-color);
+  color: white;
+}
