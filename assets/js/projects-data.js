@@ -120,6 +120,21 @@ const PROJECTS_DATA = [
     githubUrl: "https://github.com/zenriquezs/APIReader",
     featured: true,
   },
+  {
+    id: 8,
+    title: "Flutter Sales App - CHILTIC",
+    description:
+      "Aplicación móvil desarrollada en Flutter para la tienda CHILTIC-T, que permite a los usuarios explorar productos, gestionar su carrito y realizar compras de manera rápida y sencilla desde sus dispositivos móviles.",
+    image: "./assets/images/tes-movil.png",
+    technologies: [
+      { name: "Flutter", class: "bg-info" },
+      { name: "Dart", class: "bg-primary" },
+      { name: "Firebase", class: "bg-warning" },
+    ],
+    demoUrl: "https://github.com/zenriquezs/FlutterSalesAppChiltic",
+    githubUrl: "https://github.com/zenriquezs/FlutterSalesAppChiltic",
+    featured: true,
+  },
 ];
 
 function getFeaturedProjects() {
