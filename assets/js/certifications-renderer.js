@@ -1,42 +1,44 @@
 class CertificationsRenderer {
-    constructor() {
-        this.certificationsContainer = null;
-        this.init();
+  constructor() {
+    this.certificationsContainer = null;
+    this.init();
+  }
+
+  init() {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () => this.render());
+    } else {
+      this.render();
     }
+  }
 
-    init() {
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => this.render());
-        } else {
-            this.render();
-        }
+  render() {
+    this.certificationsContainer = document.querySelector(
+      "#certificaciones .row.g-4"
+    );
+
+    if (!this.certificationsContainer) {
+      console.error("No se encontró el contenedor de certificaciones");
+      return;
     }
+    this.certificationsContainer.innerHTML = "";
+    const certifications = getFeaturedCertifications();
+    certifications.forEach((cert) => {
+      const certElement = this.createCertificationCard(cert);
+      this.certificationsContainer.appendChild(certElement);
+    });
 
-    render() {
-        this.certificationsContainer = document.querySelector('#certificaciones .row.g-4');
-        
-        if (!this.certificationsContainer) {
-            console.error('No se encontró el contenedor de certificaciones');
-            return;
-        }
-        this.certificationsContainer.innerHTML = '';
-        const certifications = getFeaturedCertifications();
-        certifications.forEach(cert => {
-            const certElement = this.createCertificationCard(cert);
-            this.certificationsContainer.appendChild(certElement);
-        });
-    
-        this.reinitializeAnimations();
-    }
+    this.reinitializeAnimations();
+  }
 
-    createCertificationCard(cert) {
-        const col = document.createElement('div');
-        col.className = 'col-lg-4 col-md-6 animate-on-scroll';
+  createCertificationCard(cert) {
+    const col = document.createElement("div");
+    col.className = "col-lg-4 col-md-6 animate-on-scroll";
 
-        const skillsBadges = cert.skills.map(skill => 
-            `<span class="badge ${skill.class}">${skill.name}</span>`
-        ).join('\n                                ');        
-        const imagePlaceholder = `
+    const skillsBadges = cert.skills
+      .map((skill) => `<span class="badge ${skill.class}">${skill.name}</span>`)
+      .join("\n                                ");
+    const imagePlaceholder = `
             <div class="certificate-placeholder d-none"
                 style="height: 200px; display: flex; align-items: center; justify-content: center; background: #f8f9fa; border: 2px dashed #dee2e6; border-radius: 8px;">
                 <div class="text-center text-muted">
@@ -46,7 +48,7 @@ class CertificationsRenderer {
                 </div>
             </div>`;
 
-        col.innerHTML = `
+    col.innerHTML = `
             <div class="card h-100">
                 <!-- Espacio para imagen del certificado -->
                 <div class="certificate-image-container p-3 text-center bg-light">
@@ -77,58 +79,60 @@ class CertificationsRenderer {
             </div>
         `;
 
-        return col;
-    }
+    return col;
+  }
 
-    reinitializeAnimations() {    
-        if (window.ScrollAnimations) {
-            const scrollAnimations = new ScrollAnimations();
-        }
+  reinitializeAnimations() {
+    if (window.ScrollAnimations) {
+      const scrollAnimations = new ScrollAnimations();
     }
-    addCertification(certData) {
-        CERTIFICATIONS_DATA.push({
-            id: Date.now(), 
-            ...certData,
-            featured: certData.featured || false
-        });
-        
-        if (certData.featured) {
-            this.render(); 
-        }
-    }
-    updateCertification(id, updatedData) {
-        const certIndex = CERTIFICATIONS_DATA.findIndex(c => c.id === id);
-        if (certIndex !== -1) {
-            CERTIFICATIONS_DATA[certIndex] = { ...CERTIFICATIONS_DATA[certIndex], ...updatedData };
-            this.render();
-        }
-    }
+  }
+  addCertification(certData) {
+    CERTIFICATIONS_DATA.push({
+      id: Date.now(),
+      ...certData,
+      featured: certData.featured || false,
+    });
 
-    removeCertification(id) {
-        const certIndex = CERTIFICATIONS_DATA.findIndex(c => c.id === id);
-        if (certIndex !== -1) {
-            CERTIFICATIONS_DATA.splice(certIndex, 1);
-            this.render();
-        }
+    if (certData.featured) {
+      this.render();
     }
-
-    filterByIssuer(issuer) {
-        const filteredCerts = getCertificationsByIssuer(issuer);
-        this.renderCertifications(filteredCerts);
+  }
+  updateCertification(id, updatedData) {
+    const certIndex = CERTIFICATIONS_DATA.findIndex((c) => c.id === id);
+    if (certIndex !== -1) {
+      CERTIFICATIONS_DATA[certIndex] = {
+        ...CERTIFICATIONS_DATA[certIndex],
+        ...updatedData,
+      };
+      this.render();
     }
+  }
 
-
-    renderCertifications(certifications) {
-        if (!this.certificationsContainer) return;
-        
-        this.certificationsContainer.innerHTML = '';
-        
-        certifications.forEach(cert => {
-            const certElement = this.createCertificationCard(cert);
-            this.certificationsContainer.appendChild(certElement);
-        });
-        
-        this.reinitializeAnimations();
+  removeCertification(id) {
+    const certIndex = CERTIFICATIONS_DATA.findIndex((c) => c.id === id);
+    if (certIndex !== -1) {
+      CERTIFICATIONS_DATA.splice(certIndex, 1);
+      this.render();
     }
+  }
+
+  filterByIssuer(issuer) {
+    const filteredCerts = getCertificationsByIssuer(issuer);
+    this.renderCertifications(filteredCerts);
+  }
+
+  renderCertifications(certifications) {
+    if (!this.certificationsContainer) return;
+
+    this.certificationsContainer.innerHTML = "";
+
+    certifications.forEach((cert) => {
+      const certElement = this.createCertificationCard(cert);
+      this.certificationsContainer.appendChild(certElement);
+    });
+
+    this.reinitializeAnimations();
+  }
 }
 const certificationsRenderer = new CertificationsRenderer();

@@ -1,47 +1,49 @@
 class ProjectsRenderer {
-    constructor() {
-        this.projectsContainer = null;
-        this.init();
+  constructor() {
+    this.projectsContainer = null;
+    this.init();
+  }
+
+  init() {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () => this.render());
+    } else {
+      this.render();
+    }
+  }
+
+  render() {
+    this.projectsContainer = document.querySelector("#proyectos .row.g-4");
+
+    if (!this.projectsContainer) {
+      console.error("No se encontró el contenedor de proyectos");
+      return;
     }
 
-    init() {
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => this.render());
-        } else {
-            this.render();
-        }
-    }
+    this.projectsContainer.innerHTML = "";
 
-    render() {
-        this.projectsContainer = document.querySelector('#proyectos .row.g-4');
-        
-        if (!this.projectsContainer) {
-            console.error('No se encontró el contenedor de proyectos');
-            return;
-        }
+    const projects = getFeaturedProjects();
 
-        this.projectsContainer.innerHTML = '';
+    projects.forEach((project) => {
+      const projectElement = this.createProjectCard(project);
+      this.projectsContainer.appendChild(projectElement);
+    });
+    this.reinitializeAnimations();
+  }
 
-        const projects = getFeaturedProjects();
+  createProjectCard(project) {
+    const col = document.createElement("div");
+    col.className = "col-lg-4 col-md-6 animate-on-scroll";
 
-        projects.forEach(project => {
-            const projectElement = this.createProjectCard(project);
-            this.projectsContainer.appendChild(projectElement);
-        });
-        this.reinitializeAnimations();
-    }
+    const technologiesBadges = project.technologies
+      .map((tech) => `<span class="badge ${tech.class}">${tech.name}</span>`)
+      .join("\n                                ");
 
-    createProjectCard(project) {
-        const col = document.createElement('div');
-        col.className = 'col-lg-4 col-md-6 animate-on-scroll';
-
-        const technologiesBadges = project.technologies.map(tech => 
-            `<span class="badge ${tech.class}">${tech.name}</span>`
-        ).join('\n                                ');
-
-        col.innerHTML = `
+    col.innerHTML = `
             <div class="card h-100">
-                <img src="${project.image}" class="card-img-top" alt="${project.title}" onerror="this.src='./assets/images/CORONA.png'">
+                <img src="${project.image}" class="card-img-top" alt="${
+      project.title
+    }" onerror="this.src='./assets/images/CORONA.png'">
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">${project.title}</h5>
                     <p class="card-text flex-grow-1">
@@ -51,10 +53,18 @@ class ProjectsRenderer {
                         ${technologiesBadges}
                     </div>
                     <div class="d-flex gap-2">
-                        <a href="${project.demoUrl}" class="btn btn-primary btn-sm flex-fill" ${project.demoUrl === '#' ? 'onclick="return false;"' : 'target="_blank"'}>
+                        <a href="${
+                          project.demoUrl
+                        }" class="btn btn-primary btn-sm flex-fill" ${
+      project.demoUrl === "#" ? 'onclick="return false;"' : 'target="_blank"'
+    }>
                             <i class="bi bi-eye me-1"></i>Ver Demo
                         </a>
-                        <a href="${project.githubUrl}" class="btn btn-outline-primary btn-sm" ${project.githubUrl === '#' ? 'onclick="return false;"' : 'target="_blank"'}>
+                        <a href="${
+                          project.githubUrl
+                        }" class="btn btn-outline-primary btn-sm" ${
+      project.githubUrl === "#" ? 'onclick="return false;"' : 'target="_blank"'
+    }>
                             <i class="bi bi-github"></i>
                         </a>
                     </div>
@@ -62,43 +72,45 @@ class ProjectsRenderer {
             </div>
         `;
 
-        return col;
-    }
+    return col;
+  }
 
-    reinitializeAnimations() {        
-        if (window.ScrollAnimations) {
-            const scrollAnimations = new ScrollAnimations();
-        }
+  reinitializeAnimations() {
+    if (window.ScrollAnimations) {
+      const scrollAnimations = new ScrollAnimations();
     }
+  }
 
-    
-    addProject(projectData) {
-        PROJECTS_DATA.push({
-            id: Date.now(), 
-            ...projectData,
-            featured: projectData.featured || false
-        });
-        
-        if (projectData.featured) {
-            this.render(); 
-        }
-    }
+  addProject(projectData) {
+    PROJECTS_DATA.push({
+      id: Date.now(),
+      ...projectData,
+      featured: projectData.featured || false,
+    });
 
-    updateProject(id, updatedData) {
-        const projectIndex = PROJECTS_DATA.findIndex(p => p.id === id);
-        if (projectIndex !== -1) {
-            PROJECTS_DATA[projectIndex] = { ...PROJECTS_DATA[projectIndex], ...updatedData };
-            this.render();
-        }
+    if (projectData.featured) {
+      this.render();
     }
+  }
 
-    removeProject(id) {
-        const projectIndex = PROJECTS_DATA.findIndex(p => p.id === id);
-        if (projectIndex !== -1) {
-            PROJECTS_DATA.splice(projectIndex, 1);
-            this.render();
-        }
+  updateProject(id, updatedData) {
+    const projectIndex = PROJECTS_DATA.findIndex((p) => p.id === id);
+    if (projectIndex !== -1) {
+      PROJECTS_DATA[projectIndex] = {
+        ...PROJECTS_DATA[projectIndex],
+        ...updatedData,
+      };
+      this.render();
     }
+  }
+
+  removeProject(id) {
+    const projectIndex = PROJECTS_DATA.findIndex((p) => p.id === id);
+    if (projectIndex !== -1) {
+      PROJECTS_DATA.splice(projectIndex, 1);
+      this.render();
+    }
+  }
 }
 
 const projectsRenderer = new ProjectsRenderer();
