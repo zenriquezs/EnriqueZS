@@ -90,7 +90,7 @@ const PROJECTS_DATA = [
     title: "Calculadora de Gases de Efecto Invernadero",
     description:
       "Aplicación web para calcular equivalencias de emisiones de gases de efecto invernadero. Permite ingresar datos (como CO₂, metano, óxido nitroso) y obtener conversiones a CO₂ equivalente, facilitando la comprensión del impacto ambiental.",
-    image: "./assets/images/p3.png",
+    image: "./assets/images/P3.png",
 
     technologies: [
       { name: "PHP", class: "bg-success" },
