@@ -39,7 +39,7 @@ const PROJECTS_DATA = [
     title: "Portafolio Web Personal",
     description:
       "Sitio web desarrollado para mostrar mis proyectos, habilidades y experiencia profesional. Incluye diseño responsive, integración con redes sociales y un formulario de contacto conectado a Firebase.",
-    image: "./assets/images/portfolio.png",
+    image: "./assets/images/Portfolio.png",
     technologies: [
       { name: "HTML", class: "bg-danger" },
       { name: "CSS", class: "bg-primary" },
