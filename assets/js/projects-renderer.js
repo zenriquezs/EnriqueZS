@@ -41,7 +41,7 @@ class ProjectsRenderer {
 
         col.innerHTML = `
             <div class="card h-100">
-                <img src="${project.image}" class="card-img-top" alt="${project.title}" onerror="this.src='./assets/images/placeholder-project.png'">
+                <img src="${project.image}" class="card-img-top" alt="${project.title}" onerror="this.src='./assets/images/CORONA.png'">
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title">${project.title}</h5>
                     <p class="card-text flex-grow-1">
