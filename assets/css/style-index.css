@@ -81,7 +81,7 @@
   --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
 }
 
-
+  
 * {
   margin: 0;
   padding: 0;
@@ -142,7 +142,7 @@ body::after {
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -150,10 +150,32 @@ body::after {
   }
 }
 
-@keyframes fadeInScale {
+@keyframes fadeInLeft {
   from {
     opacity: 0;
-    transform: scale(0.95);
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
   }
   to {
     opacity: 1;
@@ -161,16 +183,16 @@ body::after {
   }
 }
 
-@keyframes gentleFloat {
+@keyframes pulse {
   0%, 100% {
-    transform: translateY(0px);
+    transform: scale(1);
   }
   50% {
-    transform: translateY(-8px);
+    transform: scale(1.05);
   }
 }
 
-@keyframes glassShimmer {
+@keyframes shimmer {
   0% {
     background-position: -200% 0;
   }
@@ -206,6 +228,11 @@ body::after {
   font-size: 1.5rem;
   box-shadow: var(--glass-shadow);
   transition: var(--transition-normal);
+  animation: pulse 2s infinite;
+}
+
+.floating-icon:nth-child(odd) {
+  animation-delay: 0.5s;
 }
 
 .floating-icon:hover {
@@ -819,9 +846,10 @@ section {
   border: 1px solid var(--glass-border);
   border-radius: var(--border-radius-xl);
   box-shadow: var(--glass-shadow);
-  transition: var(--transition-normal);
+  transition: all var(--transition-normal);
   overflow: hidden;
   position: relative;
+  animation: scaleIn 0.5s ease-out;
 }
 
 .card::before {
@@ -842,8 +870,8 @@ section {
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
   border-color: rgba(99, 102, 241, 0.3);
   background: var(--glass-bg-hover);
 }
@@ -880,11 +908,12 @@ section {
   border-radius: var(--border-radius-xl);
   padding: var(--spacing-lg);
   text-align: center;
-  transition: var(--transition-normal);
+  transition: all var(--transition-normal);
   cursor: pointer;
   box-shadow: var(--glass-shadow);
   position: relative;
   overflow: hidden;
+  animation: fadeInUp 0.6s ease-out;
 }
 
 .skill-item::before {
@@ -904,7 +933,7 @@ section {
 }
 
 .skill-item:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px) scale(1.02);
   box-shadow: var(--shadow-xl);
   border-color: rgba(99, 102, 241, 0.3);
   background: var(--glass-bg-hover);
@@ -1051,7 +1080,7 @@ section {
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .animate-on-scroll.animate {
@@ -1067,11 +1096,8 @@ section {
 }
 
 
-.cursor {
-  display: inline-block;
-  background-color: var(--primary-color);
-  margin-left: 3px;
-  width: 2px;
+.hero-title::after {
+  content: '|';
   animation: blink 1s infinite;
 }
 

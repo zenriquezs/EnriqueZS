@@ -26,7 +26,7 @@ class ParticleSystem {
     this.particles = [];
     this.mouse = { x: 0, y: 0 };
     this.animationId = null;
-    this.isVisible = true;
+    this.isVisible = false;
     this.init();
   }
 
@@ -47,7 +47,7 @@ class ParticleSystem {
             width: 100%;
             height: 100%;
             pointer-events: none;
-            z-index: 1;
+            z-index: -1;
             opacity: 0.6;
         `;
 
